@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { incrementData, decrementData } from './actions/action'
 
 
 class App extends Component {
 
     state = { count:0 }
     increment = () => {
-        this.props.dispatch({type:'INCREMENT'});
+        this.props.dispatch(incrementData());
     }
 
     decrement = () => {
-      this.props.dispatch({type:'DECREMENT'});
+      this.props.dispatch(decrementData());
     }
 
   render() {
